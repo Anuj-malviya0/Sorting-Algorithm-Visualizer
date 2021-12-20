@@ -77,3 +77,73 @@ def bubble_sort(height):
         draw_rect(COLOR_1,20,20,250,550)
         draw_rect(COLOR_1,290,20,900,550)
 	
+# implementing insertin sort
+def insertion_sort(arr, n):
+    for i in range(1, n):
+        pygame.time.delay(100)
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                exit()
+        current_position = i
+        current_element = arr[i]
+        while current_position > 0 and current_element < arr[current_position - 1]:
+            arr[current_position] = arr[current_position - 1]
+            current_position -= 1
+        arr[current_position] = current_element
+        win.fill(COLOR_2)
+        print(end="")
+        show(height)
+        
+        draw_rect(COLOR_1,20,20,250,550)
+        draw_rect(COLOR_1,290,20,900,550)
+        detail_text("Insertion sort","O(n^2)","O(1)")
+        display_time()
+        pygame.display.update()
+# implementing merge sort
+# merge sort requires two functions one for merginf the sub arrays and one for 
+# recursive call
+def merge(data, start, mid, end):
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            exit()
+    pygame.time.delay(100)
+    p = start
+    q = mid + 1
+    tempArray = []
+
+    for i in range(start, end+1):
+        if p > mid:
+            tempArray.append(data[q])
+            q+=1
+        elif q > end:
+            tempArray.append(data[p])
+            p+=1
+        elif data[p] < data[q]:
+            tempArray.append(data[p])
+            p+=1
+        else:
+            tempArray.append(data[q])
+            q+=1
+
+    for p in range(len(tempArray)):
+        data[start] = tempArray[p]
+        start += 1
+def merge_sort(data, start, end):
+
+    if start < end:
+        mid = int((start + end) / 2)
+        merge_sort(data, start, mid)
+        merge_sort(data, mid+1, end)
+
+        merge(data, start, mid, end)
+        win.fill(COLOR_2)
+        print(end="")
+        show(height)
+        detail_text("Merge sort","O(n log n)","O(1)")
+        draw_rect(COLOR_1,20,20,250,550)
+        draw_rect(COLOR_1,290,20,900,550)
+        display_time()
+        pygame.display.update()
+        
+    show(height)
+    pygame.display.update()
