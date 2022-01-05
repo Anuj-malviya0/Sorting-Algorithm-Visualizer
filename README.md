@@ -159,16 +159,14 @@ for i in range(len(arr)):
 ## Lessons Learned
 
 What did you learn while building this project? 
+
 I learned how different types of sorting algorithms work and how pygame module works
 
 What challenges did you face and how did you overcome them?
+
 firstly the first challange i need a  functon that will draw bars acording to the unsorted data and will update them accordingly
 so my visualizer works like this firstly it has a list of unsorted data and there is a function named show which draws lines with height equal to each element present in the list respectively and then the sorting algorithm sorts the list and then the show function draws the lines with the updated data
 the problem is that the algorithm and show function to work properly so i have to sort this problem and solved this by calling the show funcvtion inside the algorithm function
-
-
-## Screenshots
-<img src="https://user-images.githubusercontent.com/75200824/148047439-245b9fc3-2340-4380-bbe7-8a2eaa2803c9.png" width="600" height="300"/>
 
 
 
