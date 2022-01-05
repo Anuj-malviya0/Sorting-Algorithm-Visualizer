@@ -41,8 +41,8 @@ BROWN   = (55,41,36)
 
 
 #variables that controles colours
-COLOR_1 = (255,0,0)
-COLOR_2 = BLACK
+COLOR_1 = BROWN
+COLOR_2 = GRAY_L
 
 #pygame initilization
 pygame.init()
@@ -72,7 +72,7 @@ def draw_rect(col,x,y,w,h):
 # function to show the list of height   
 def show(height): 
     for i in range(len(height)):
-        line =  pygame.Rect(x +17 * i, y, width,height[i]*10)
+        line =  pygame.Rect(x + (width+2) * i, y, width,height[i]*10)
         # drawing each bar with respective gap
         pygame.draw.rect(win, COLOR_1,line)
 # implementing bubble sort
