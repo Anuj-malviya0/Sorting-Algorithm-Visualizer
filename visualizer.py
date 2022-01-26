@@ -41,13 +41,15 @@ BROWN   = (55,41,36)
 
 
 #variables that controles colours
-COLOR_1 = BROWN
-COLOR_2 = GRAY_L
+COLOR_1 = BLACK
+COLOR_2 = WHITE
 
 #pygame initilization
 pygame.init()
 #creating a object of class text
-txt = Text('cambriacambriamath',40)
+# txt = Text('cambriacambriamath',40)
+
+txt = Text('comicsans',40)
 # setting window size
 win = pygame.display.set_mode((1200, 600))
 # setting title to the window
@@ -100,9 +102,9 @@ def bubble_sort(height):
         # txt.Render("Complexity :- ",35 ,290)
         # txt.Render("O(1)",60,330)
         # txt.Render("Delay :- 100",40,515)
-        draw_rect(COLOR_1,20,20,250,550)
-        draw_rect(COLOR_1,290,20,900,550)
-        display_time()
+        # draw_rect(COLOR_1,20,20,250,550)
+        # draw_rect(COLOR_1,290,20,900,550)
+        # display_time()
         pygame.display.update()
 # implementing insertin sort
 def insertion_sort(arr, n):
@@ -121,10 +123,10 @@ def insertion_sort(arr, n):
         print(end="")
         show(height)
         
-        draw_rect(COLOR_1,20,20,250,550)
-        draw_rect(COLOR_1,290,20,900,550)
-        detail_text("Insertion sort","O(n^2)","O(1)")
-        display_time()
+        # draw_rect(COLOR_1,20,20,250,550)
+        # draw_rect(COLOR_1,290,20,900,550)
+        # detail_text("Insertion sort","O(n^2)","O(1)")
+        # display_time()
         pygame.display.update()
 # implementing merge sort
 # merge sort requires two functions one for merginf the sub arrays and one for 
@@ -166,10 +168,10 @@ def merge_sort(data, start, end):
         win.fill(COLOR_2)
         print(end="")
         show(height)
-        detail_text("Merge sort","O(n log n)","O(1)")
-        draw_rect(COLOR_1,20,20,250,550)
-        draw_rect(COLOR_1,290,20,900,550)
-        display_time()
+        # detail_text("Merge sort","O(n log n)","O(1)")
+        # draw_rect(COLOR_1,20,20,250,550)
+        # draw_rect(COLOR_1,290,20,900,550)
+        # display_time()
         pygame.display.update()
         
     show(height)
@@ -191,10 +193,10 @@ def selection_sort(arr, n):
         arr[i], arr[min_element_index] = arr[min_element_index], arr[i]
         win.fill(COLOR_2)
         show(height)
-        detail_text("Selection sort","O(n^2)","O(1)")
-        draw_rect(COLOR_1,20,20,250,550)
-        draw_rect(COLOR_1,290,20,900,550)
-        display_time()
+        # detail_text("Selection sort","O(n^2)","O(1)")
+        # draw_rect(COLOR_1,20,20,250,550)
+        # draw_rect(COLOR_1,290,20,900,550)
+        # display_time()
         pygame.display.update()
 # infinite loop
 while run:
