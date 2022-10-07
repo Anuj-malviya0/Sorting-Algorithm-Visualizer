@@ -3,6 +3,14 @@
 
 creating a sorting Algorithm Visualizer using a pygame module
 
+## Screenshoots
+# Unsorted
+![image](https://user-images.githubusercontent.com/75200824/194514827-b279dabd-906a-4554-8fb2-779246a12ba7.png)
+# Sorted
+![image](https://user-images.githubusercontent.com/75200824/194514922-c5bfd705-d46c-4786-a8a9-fb37569751c8.png)
+
+
+
 ## Merge sort
 ```python
 # Python program for implementation of MergeSort
